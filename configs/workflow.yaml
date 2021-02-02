@@ -1,0 +1,52 @@
+# describe the configuration as type workflow
+type: Workflow
+
+# define the match properties
+match:
+  # define the match function
+  callback: match_any
+
+key: hello_world_workflow
+---
+# describe the configuration as type operation
+type: Operation
+
+# connect to matching configs
+selector:
+  workflow: hello_world_workflow
+  app: hello_world_app
+  app_action: hello_world
+
+# define as starting component
+is_root: true
+
+# define the payload to the service
+payload:
+  name:
+    type: request
+    data: message_data.message.body
+
+# define the internal key
+key: get_hello_world_message
+---
+# describe the configuration as type operation
+type: Operation
+
+# connect to matching configs
+selector:
+  workflow: hello_world_workflow
+  app: whatsapp
+  app_action: send_message
+
+# drop user session when done
+output:
+  operation_type: drop_session
+
+# define the payload to the service
+payload:
+  content:
+    type: redis
+    data: get_hello_world_message:message
+
+# define the internal key
+key: get_hello_world_message

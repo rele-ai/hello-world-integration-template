@@ -1,0 +1,24 @@
+# describe the configurations type
+type: App
+
+# point to the app's base url
+base_url: {{BASE_URL}}
+
+# does the application use TLS security
+tls: {{IS_TLS}}
+
+# internal selection key
+key: hello_world_app
+---
+# describe the configuration type
+type: AppAction
+
+# connect to matching application
+selector:
+  # point to hello_world_app key
+  app: hello_world_app
+
+# define the action key
+# this key must match the handler name
+# in the source code
+key: hello_world
