@@ -1,4 +1,4 @@
-// const { logger } = require("@releai/rb-node-sdk")
+const logger = require("@releai/rb-node-sdk/src/utils/logger")
 
 /**
  * Pull the message from the request and reply
@@ -9,10 +9,10 @@
  */
 module.exports.hello_world = (req, res) => {
     // log.debug the request payload
-    // logger.debug({
-    //     message: "recieved request to hello_world endpoint",
-    //     payload: req.payload
-    // })
+    logger.info({
+        message: "recieved request to hello_world endpoint",
+        payload: req.payload
+    })
 
     // reply to the user with the custom message
     res.send(200, {
