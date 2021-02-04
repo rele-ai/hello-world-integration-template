@@ -9,11 +9,26 @@ module.exports = {
         DESCRIPTION: {
             type: "string",
             required: true,
-            label: "Project name"
+            label: "Project description"
         },
         BASE_URL: {
             type: "string",
             required: true,
+            validate: (input) => {
+                try {
+                    let [domain, port] = input.split(":")
+                    port = Number(port)
+
+                    if (/^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9](?:\.[a-zA-Z]{2,})+$/.test(domain) && port > 0 && port <= 65535) {
+                        return true
+                    }
+
+                    return false
+                } catch (e) {
+                    console.error("unable to validate base_url", e)
+                    return false
+                }
+            },
             label: "Application's base url `${domain}:${port}`"
         },
         IS_TLS: {

@@ -5,7 +5,7 @@ This is a project template for `rb-cli`.
 
 ```shell
 $ npm install -g @releai/cli
-$ rb create my-project --template hello-world-integration-template
+$ rb create my-project --template rele-ai/hello-world-integration-template#main
 $ cd my-project
 $ npm install
 $ rb push

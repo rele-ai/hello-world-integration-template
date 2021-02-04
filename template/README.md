@@ -1,5 +1,5 @@
-# {{PROJECT_NAME}}
-{{DESCRIPTION}}
+# {{ PROJECT_NAME }}
+{{ DESCRIPTION }}
 
 ## Build Setup
 ```shell

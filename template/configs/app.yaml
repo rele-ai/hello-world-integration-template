@@ -2,10 +2,10 @@
 type: App
 
 # point to the app's base url
-base_url: {{BASE_URL}}
+base_url: {{ BASE_URL }}
 
 # does the application use TLS security
-tls: {{IS_TLS}}
+tls: {{ IS_TLS }}
 
 # internal selection key
 key: hello_world_app
