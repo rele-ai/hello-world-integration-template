@@ -20,6 +20,12 @@ selector:
 # define as starting component
 is_root: true
 
+# point to next operation
+next_operation:
+  selector:
+    - workflow: hello_world_workflow
+      operation: get_hello_world_message_send
+
 # define the payload to the service
 payload:
   name:
@@ -49,4 +55,4 @@ payload:
     data: get_hello_world_message:message
 
 # define the internal key
-key: get_hello_world_message
+key: get_hello_world_message_send
