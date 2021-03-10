@@ -37,5 +37,5 @@ module.exports = {
             label: "Is the application protected by SSL?"
         }
     },
-    completeMessage: "{{#inPlace}}To get started:\n\n  npm install\n  rb push{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  rb push{{/inPlace}}"
+    completeMessage: "{{#inPlace}}To get started:\n\n  npm install\n  rb push{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  rb deploy:user OR rb deploy:org{{/inPlace}}"
 }
