@@ -4,7 +4,7 @@
   "description": "RELE.AI Integration",
   "main": "src/index.js",
   "scripts": {
-    "dev": "nodemon ./src/index.js",
+    "dev": "rb dev ./src/index.js",
     "start": "node ./src/index.js",
     "deploy": "sh ./scripts/deploy.sh",
     "test": "mocha --exit"
@@ -14,6 +14,6 @@
   },
   "devDependencies": {
     "mocha": "*",
-    "nodemon": "*"
+    "@releai/cli": "*"
   }
 }
