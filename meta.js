@@ -19,7 +19,7 @@ module.exports = {
                     let [domain, port] = input.split(":")
                     port = Number(port)
 
-                    if (/^[a-zA-Z0-9][a-zA-Z0-9-]{1,61}[a-zA-Z0-9](?:\.[a-zA-Z]{2,})+$/.test(domain) && port > 0 && port <= 65535) {
+                    if (/^[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)$/.test(domain) && port > 0 && port <= 65535) {
                         return true
                     }
 
