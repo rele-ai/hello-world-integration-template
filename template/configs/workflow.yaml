@@ -13,7 +13,8 @@ type: Operation
 
 # connect to matching configs
 selector:
-  workflow: hello_world_workflow
+  workflow:
+    - hello_world_workflow
   app: hello_world_app
   app_action: hello_world
 
@@ -40,7 +41,8 @@ type: Operation
 
 # connect to matching configs
 selector:
-  workflow: hello_world_workflow
+  workflow:
+    - hello_world_workflow
   app: whatsapp
   app_action: send_message
 
