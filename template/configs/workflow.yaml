@@ -22,10 +22,12 @@ selector:
 is_root: true
 
 # point to next operation
-next_operation:
+next:
   selector:
-    - workflow: hello_world_workflow
-      operation: get_hello_world_message_send
+    - type: operation
+      data:
+        workflow: hello_world_workflow
+        next: get_hello_world_message_send
 
 # define the payload to the service
 payload:

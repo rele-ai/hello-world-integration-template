@@ -1,16 +1,19 @@
 {
-  "name": "{{ PROJECT_NAME }}",
+  "name": "hello-world-example",
   "version": "0.1.0",
   "description": "RELE.AI Integration",
   "main": "src/index.js",
   "scripts": {
     "dev": "rb dev ./src/index.js",
     "start": "node ./src/index.js",
+    "tokens": "rb app:tokens | grep 'APP_' | sed 's/: /=/g' >> .env",
+    "cleanup": "sh ./scripts/cleanup.sh",
     "deploy": "sh ./scripts/deploy.sh",
     "test": "mocha --exit"
   },
   "dependencies": {
-    "@releai/rb-node-sdk": "*"
+    "@releai/rb-node-sdk": "*",
+    "dotenv": "9.0.2"
   },
   "devDependencies": {
     "mocha": "*",

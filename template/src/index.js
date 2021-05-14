@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 const { RBS } = require("@releai/rb-node-sdk")
 const handlers = require("./handlers")
 

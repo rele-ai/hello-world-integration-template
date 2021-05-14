@@ -8,7 +8,7 @@ $ npm install -g @releai/cli
 $ rb create my-project --template rele-ai/hello-world-integration-template#main
 $ cd my-project
 $ npm install
-$ rb deploy:user OR rb deploy:org
+$ npm run dev
 ```
 
 ## What's included
