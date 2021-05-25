@@ -5,7 +5,7 @@ type: App
 base_url: PLACEHOLDER_BASE_URL
 
 # does the application use TLS security
-tls: true
+tls: false
 
 # internal selection key
 key: hello_world_app

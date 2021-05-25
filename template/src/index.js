@@ -13,4 +13,4 @@ const rbs = new RBS({
 rbs.use(handlers)
 
 // start the server listener
-rbs.listen(3000)
+rbs.listen(9090)
